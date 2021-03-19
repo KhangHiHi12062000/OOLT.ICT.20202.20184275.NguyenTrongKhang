@@ -14,7 +14,9 @@ public class Cart {
         }
         else{
         for(int i=0;i<=dvdList.length-1;i++){
-            addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2)
+            this.itemsOdered[i] = dvdList[i];
+            this.itemsOdered[i].print();
+            qtyOdered++;
         }
         }
     }
