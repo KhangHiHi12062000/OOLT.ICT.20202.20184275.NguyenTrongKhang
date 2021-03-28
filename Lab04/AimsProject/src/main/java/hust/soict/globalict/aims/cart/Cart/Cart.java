@@ -31,6 +31,11 @@ public class Cart {
 		}
 		return tCost;
 	}
+        public void removeAllDVD(){
+            for(int i=0;i<qtyOrdered();i++){
+                this.removeDigitalVideoDisc(itemsOrdered[i]);
+            }
+        }
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 		int position=-1;
 		for(int i=0; i<qtyOrdered(); i++) {
@@ -144,4 +149,25 @@ public class Cart {
 			System.out.println(itemsOrdered[number].getDetail());
 		}
 	}
+        public DigitalVideoDisc SearchId(int id){
+            for(int i=0;i<=qtyOrdered();i++){
+                if(itemsOrdered[i].getId()==id){
+                    return itemsOrdered[i];
+                }
+            }
+            return null;
+        }
+    
+    public void searchByTitle(String title) {
+        int number = -1;
+        for(int i=0;i<qtyOrdered();i++){
+            if(itemsOrdered[i].search(title)){
+                number = i;
+                System.out.println(itemsOrdered[number].getDetail());
+            }
+        }
+        if(number == -1){
+            System.out.println("Can not find DVD!!!");
+        }
+    }
 }

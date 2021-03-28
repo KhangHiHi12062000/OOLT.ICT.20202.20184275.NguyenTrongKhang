@@ -129,6 +129,18 @@ public class Cart {
 		System.out.println("Total cost: " + totalCost());
 		System.out.println("****************************************");
 	}
+        public void searchByTitle(String title){
+            int number = -1;
+            for(int i=0;i < qtyOrdered() ; i++){
+                if(itemsOrdered[i].search(title)){
+                     number = i;                    
+                    System.out.println(itemsOrdered[number].getDetail());
+                }
+                if(number == -1){
+                    System.out.println("Cannot find title.");
+                }
+            }
+        }
 	public void searchByID(int id) {
 		int number = -1;
 		for(int i=0; i<  qtyOrdered(); i++) {
@@ -142,4 +154,6 @@ public class Cart {
 			System.out.println(itemsOrdered[number].getDetail());
 		}
 	}
+        
+    
 }

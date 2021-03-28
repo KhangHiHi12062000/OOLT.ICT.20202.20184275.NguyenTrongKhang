@@ -168,5 +168,9 @@ public class DigitalVideoDisc {
     public String getDetail(){
 		return "DVD " + title + " - " + category + " - " + " - " +director+ " - "+length + ": " +cost +" $";
 	}
+
+    boolean search(String title) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

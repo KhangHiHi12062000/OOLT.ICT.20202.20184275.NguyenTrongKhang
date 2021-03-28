@@ -165,9 +165,13 @@ public class DigitalVideoDisc {
 		nbDigitalVideoDiscs++;
                 this.id = nbDigitalVideoDiscs;
 	}
-
+    public boolean search(String title){
+        String str = this.title.toLowerCase();
+        title = title.toLowerCase();
+        return str.contains(title);
+    }
     public String getDetail(){
-		return "DVD " + title + " - " + category + " - " + " - " +director+ " - "+length + ": " +cost +" $";
+		return  id + "."+"DVD " + title + " - " + category + " - " + " - " +director+ " - "+length + ": " +cost +" $";
 	}
     
 }
