@@ -9,9 +9,9 @@ public class toStringTest {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List<String> authors = new ArrayList<String>();
-		authors.add("Thao");
-		authors.add("Chipp");
-		authors.add("Cross");
+		authors.add("Khang");
+		authors.add("An");
+		authors.add("The Lion King");
 		Book Book1;
 //		System.out.println("This test for contentsTokens",Book1.getContentTokens());
         Book1 = new Book("Wars", "Story", 30f, authors,"i can can the can. But you, see you");
