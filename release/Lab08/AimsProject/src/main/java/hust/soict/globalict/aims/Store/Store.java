@@ -1,4 +1,4 @@
-package hust.soict.globalict.aims.store;
+package hust.soict.globalict.aims.Store;
 
 import java.util.ArrayList;
 

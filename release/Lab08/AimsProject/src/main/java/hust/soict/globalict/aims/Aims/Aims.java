@@ -1,12 +1,12 @@
 package hust.soict.globalict.aims.Aims;
 import java.lang.Thread;
 import hust.soict.globalict.aims.Threads.MemoryDaemon;
-import hust.soict.globalict.aims.cart.Cart;
+import hust.soict.globalict.aims.cart.Cart.*;
 import hust.soict.globalict.aims.media.Book;
 import hust.soict.globalict.aims.media.CompactDisc;
 import hust.soict.globalict.aims.media.DigitalVideoDisc;
 import hust.soict.globalict.aims.media.Media;
-import hust.soict.globalict.aims.store.Store;
+import hust.soict.globalict.aims.Store.*;
 import java.util.Scanner;
 
 public class Aims {
