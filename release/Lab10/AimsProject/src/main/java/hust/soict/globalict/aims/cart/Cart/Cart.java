@@ -1,15 +1,19 @@
 package hust.soict.globalict.aims.cart.Cart;
 import java.util.ArrayList;
+import java.util.Observable;
 
 import hust.soict.globalict.aims.media.Book;
 import hust.soict.globalict.aims.media.CompactDisc;
 import hust.soict.globalict.aims.media.DigitalVideoDisc;
 import hust.soict.globalict.aims.media.Media;
 import hust.soict.globalict.aims.utils.MediaUtils.MediaUtils;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
-	public ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+	//public ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+	public ObservableList<Media> itemsOrdered = FXCollections.observableArrayList(); 
 	private boolean hasLuckyNumber = false;
         public void PlayAllCart(){
             for(Media item : itemsOrdered){
@@ -52,7 +56,7 @@ public class Cart {
 	}
 	
 	public void emptyCart() {
-		itemsOrdered = new ArrayList<Media>();
+		itemsOrdered = (ObservableList<Media>) new ArrayList<Media>();
 		hasLuckyNumber = false;
 	}
 	
